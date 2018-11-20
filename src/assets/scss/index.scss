@@ -1,5 +1,14 @@
-@import '_color';
-body {
-  background: $bgcolor;
-  color: $color;
+@import './bootstrap.custom.scss';
+.jedi-nav-link {
+    @extend .nav-link;
+    margin-inline-start: 5px;
+    margin-inline-end: 5px;
+}
+.navbar{
+  padding: 0 1rem;
+}
+.navbar-brand .jedi-logo {
+    height: 4rem;
+    width: auto;
+    margin: -0.75rem .75rem;
 }
