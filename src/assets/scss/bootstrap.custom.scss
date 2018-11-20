@@ -1,0 +1,8 @@
+$body-bg: #f8f9fa;
+$primary-color: #f0656f;
+$theme-colors: ( "primary": $primary-color, );
+$navbar-light-color : rgba(#000000, .7) !default;
+$navbar-light-hover-color : $primary-color;
+$navbar-light-active-color : $primary-color;
+$navbar-light-disabled-color : rgba($primary-color, .3) !default;
+@import "../../../node_modules/bootstrap/scss/bootstrap";
