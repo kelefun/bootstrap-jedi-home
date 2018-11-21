@@ -45,7 +45,8 @@ module.exports = {
       new HtmlWebpackPlugin({
         minify: false,
         template: './view/index.html',
-        loader: 'html-loader'
+        loader: 'html-loader',
+        favicon:'../favicon.ico'
       }),
     ],
   
