@@ -1,20 +1,16 @@
 @import './bootstrap.custom.scss';
-.jedi-nav-link {
-    @extend .nav-link;
-    margin-inline-start: 5px;
-    margin-inline-end: 5px;
-}
 .navbar{
   padding: 0 1rem;
+}
+.navbar-light{
+  background: #ffffff;
 }
 .jedi-logo {
     height: 4rem;
     width: auto;
     margin: -0.75rem .75rem;
 }
-
 .jedi-header-avatar {
   height: 2rem;
   width: 2rem;
-  margin: 0 1rem;
 }
