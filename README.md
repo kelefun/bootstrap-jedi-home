@@ -1,9 +1,6 @@
-# Webpack 4 Boilerplate for beginners
-A basic webpack 4 boilerplate for beginners to start with any JS/ES6 based project.
-<br>
-## Guide
-This basic boilerplate is the final output of this comprehensive write up on Medium. I recommend to read this article to know the insight of how you can configure webpack from scratch.
-<br>
+# [jedijava.com](http://www.jedijava.com) front project
+
+
 ## Install dependencies
 
 ```
@@ -43,5 +40,5 @@ npm run build:prod
 
 ### Plugins
 * clean-webpack-plugin
-* extract-text-webpack-plugin
+* mini-css-extract-plugin
 * html-webpack-plugin
