@@ -5,14 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Jedi Java</title>
+  <title>JediJava</title>
 </head>
 
 <body>
   ${require('html-loader!../tpl/header/header.html')}
   <div class="container">
     <!-- Content here -->
-    ${require('html-loader!../tpl/carousel/carousel.html')}
+    <div class="row">
+      <div class="jedi-content col-lg-9">
+        <div class="row">
+          ${require('html-loader!../tpl/carousel/carousel.html')}
+        </div>
+      </div>
+      <div class="jedi-side col-lg-3">
+        侧边栏
+      </div>
+    </div>
 
   </div>
 </body>

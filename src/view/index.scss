@@ -3,7 +3,7 @@
   padding: 0 1rem;
 }
 .navbar-light{
-  background: #ffffff;
+  background: $white;
 }
 .jedi-logo {
     height: 4rem;
@@ -13,4 +13,16 @@
 .jedi-header-avatar {
   height: 2rem;
   width: 2rem;
+}
+
+.jedi-content .carousel-inner   {
+  max-height: 300px
+}
+@include media-breakpoint-down(md) {
+  .jedi-content .carousel-inner   {
+    max-height: 200px
+  }
+  .jedi-side {
+    display: none;
+  }
 }
