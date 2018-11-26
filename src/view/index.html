@@ -10,15 +10,30 @@
 
 <body>
   ${require('html-loader!../tpl/header/header.html')}
-  <div class="container">
+  <div class="jedi-content-wrapper container">
     <!-- Content here -->
     <div class="row">
       <div class="jedi-content col-lg-9">
         <div class="row">
-          ${require('html-loader!../tpl/carousel/carousel.html')}
+          <div class="jedi-banner jedi-md-dispear col-lg-3">
+              <img class="rounded w-100 h-100" src="http://oss.jedijava.com/img/banner.jpg" >
+          </div>
+          <div class="jedi-carousel col-lg-9">
+            ${require('html-loader!../tpl/carousel/carousel.html')}
+          </div>
+        </div>
+        <div class="jedi-divider row"></div>
+        <div class="row">
+          文章
+        </div>
+        <div class="row">
+          文章
+        </div>
+        <div class="row">
+          文章
         </div>
       </div>
-      <div class="jedi-side col-lg-3">
+      <div class="jedi-side jedi-md-dispear col-lg-3">
         侧边栏
       </div>
     </div>
