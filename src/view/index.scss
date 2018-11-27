@@ -1,44 +1,78 @@
 @import '../assets/scss/bootstrap.custom.scss';
-.navbar{
-  padding: 0 1rem;
+$avatar-size:2rem;
+.iconfont{
+    color:$primary-color;
 }
-.navbar-light{
-  background: $white;
+.navbar {
+    padding: 0 1rem;
 }
+.navbar-light {
+    background: $white;
+}
+
 .jedi-logo {
     height: 4rem;
     width: auto;
     margin: -0.75rem .75rem;
 }
+
 .jedi-header-avatar {
-  height: 2rem;
-  width: 2rem;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
 }
-.jedi-content-wrapper{
-  background-color: white;
-  min-height: 50rem;
-  padding: 1rem 2rem;
+
+.jedi-content-wrapper {
+    background-color: white;
+    min-height: 50rem;
+    padding: 1rem 2rem;
 }
-.jedi-content .carousel-inner   {
-  max-height: 230px;
+
+.jedi-content .carousel-inner {
+    max-height: 230px;
 }
-.jedi-banner{
-  max-height: 230px;
+
+.jedi-banner {
+    max-height: 230px;
 }
-.jedi-side{
-  background-color: wheat;
+
+.jedi-side {
+    background-color: wheat;
 }
-.jedi-divider{
-  height:10px;
-  border-bottom:1px solid $primary-color;
-  // margin-inline-start:10px ;
-  // margin-inline-end:10px ;
-  margin: 10px 0;
-  
+
+.jedi-divider {
+    height: 10px;
+    border-bottom: 1px solid $primary-color;
+    margin: 10px 0;
+}
+
+.jedi-overview{
+    padding:0 .3rem;
+}
+.jedi-overview-avatar{
+    width: $avatar-size;
+    height: $avatar-size;
+}
+.jedi-overview-label {
+    background:inherit;
+    border-width:1px;
+    border-style:solid;
+    border-color: #f0656f ;
+    border-radius:4px;
+    font-size:.8rem;
+    color:#F0656F;
+  }
+.jedi-article-p {
+    font-size: .8rem;
+    letter-spacing: 0;
+}
+.jedi-article-meta{
+    font-size:.8rem;
+    color:gray;
 
 }
 @include media-breakpoint-down(md) {
-  .jedi-md-dispear{
-    display: none;
-  }
+    .jedi-md-dispear {
+        display: none;
+    }
 }
