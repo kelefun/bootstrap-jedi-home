@@ -1,14 +1,15 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const glob = require('glob');
 const config = require('./webpack.base');
 
 module.exports = (env, argv) => {
-  console.log('env=' + env + ',argv=' + JSON.stringify(argv) );
+  // console.log('env=' + env + ',argv=' + JSON.stringify(argv));
   let server = argv.server;
   let result;
   if (argv.mode === 'development') {//merge 开发环境独有配置
-    result= merge(config, {
+    result = merge(config, {
       devtool: 'inline-source-map',
       devServer: {
         contentBase: path.join(__dirname, 'dist'),
@@ -18,7 +19,7 @@ module.exports = (env, argv) => {
       }
     });
   } else {//merge 生产环境独有配置
-    result= merge(config, {
+    result = merge(config, {
       optimization: {
         splitChunks: {
           cacheGroups: {
@@ -33,13 +34,13 @@ module.exports = (env, argv) => {
     });
   }
   //merge 公共配置,但vlaue稍有区别
-  result= merge(result, {
+  result = merge(result, {
     module: {
       rules: [
         {
           test: /\.(sa|sc|c)ss$/,
           use: [
-            server ? 'style-loader' : MiniCssExtractPlugin.loader ,
+            server ? 'style-loader' : MiniCssExtractPlugin.loader,
             'css-loader',
             'postcss-loader',
             'sass-loader',
@@ -48,6 +49,6 @@ module.exports = (env, argv) => {
       ]
     }
   });
-// console.log(result);
+  // console.log(result);
   return result;
 }; 

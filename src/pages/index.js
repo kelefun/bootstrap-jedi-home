@@ -6,5 +6,5 @@ import $ from 'jquery';
 $('.nav-link').on('click',function () {
     let $ele = $(this);
     console.log('点击->'+$ele.text());
-    $ele.text("已点击");
+    // $ele.text("已点击");
 })

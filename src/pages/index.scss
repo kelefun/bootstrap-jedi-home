@@ -19,7 +19,7 @@ $avatar-size:2rem;
 .jedi-header-avatar {
     height: 2rem;
     width: 2rem;
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .jedi-content-wrapper {
@@ -29,15 +29,17 @@ $avatar-size:2rem;
 }
 
 .jedi-content .carousel-inner {
-    max-height: 230px;
+    max-height: 210px;
 }
-
+.jedi-content {
+    padding: 0 5rem;
+}
 .jedi-banner {
-    max-height: 230px;
+    max-height: 210px;
 }
 
 .jedi-side {
-    background-color: wheat;
+    // background-color: wheat;
 }
 
 .jedi-divider {
@@ -46,9 +48,9 @@ $avatar-size:2rem;
     margin: 10px 0;
 }
 
-.jedi-overview{
-    padding:0 .3rem;
-}
+// .jedi-overview{
+//     padding:0 .3rem;
+// }
 .jedi-overview-avatar{
     width: $avatar-size;
     height: $avatar-size;
@@ -63,7 +65,7 @@ $avatar-size:2rem;
     color:#F0656F;
   }
 .jedi-article-p {
-    font-size: .8rem;
+    font-size: .9rem;
     letter-spacing: 0;
 }
 .jedi-article-meta{
@@ -74,5 +76,8 @@ $avatar-size:2rem;
 @include media-breakpoint-down(md) {
     .jedi-md-dispear {
         display: none;
+    }
+    .jedi-content {
+        padding: 0;
     }
 }
