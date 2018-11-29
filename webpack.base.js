@@ -17,6 +17,7 @@ const htmlFiles = glob.sync(path.resolve(__dirname, 'src') + '/pages/**/*.html')
 const htmls = htmlFiles.map(html => {
   let start = html.lastIndexOf("/");
   let name = html.substring(start + 1);
+//TODO 需要指定 js
   return new HtmlWebpackPlugin({
     minify: false,
     template: html,
@@ -56,9 +57,8 @@ module.exports = {
   plugins: [
     // cleaning up only 'dist' folder
     new CleanWebpackPlugin(['dist']),
+    //提取css注入到html中
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
       filename: "./assets/css/[name].[hash].css",
       chunkFilename: "./assets/css/[id].[hash].css"
     }),
