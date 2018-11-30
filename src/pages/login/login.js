@@ -1,1 +1,2 @@
-import './login.css';
+import 'bootstrap/dist/js/bootstrap'
+import './login.scss';
