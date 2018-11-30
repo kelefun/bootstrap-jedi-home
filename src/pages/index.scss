@@ -1,5 +1,6 @@
 @import '../assets/scss/bootstrap.custom.scss';
-$avatar-size:2rem;
+$avatar-size:1.5rem;
+$header-avatar-size:2rem;
 .iconfont{
     color:$primary-color;
 }
@@ -17,9 +18,8 @@ $avatar-size:2rem;
 }
 
 .jedi-header-avatar {
-    height: 2rem;
-    width: 2rem;
-    margin-left: 1rem;
+    height: $header-avatar-size;
+    width: $header-avatar-size;
 }
 
 .jedi-content-wrapper {
@@ -59,10 +59,10 @@ $avatar-size:2rem;
     background:inherit;
     border-width:1px;
     border-style:solid;
-    border-color: #f0656f ;
+    border-color: $primary-color ;
     border-radius:4px;
     font-size:.8rem;
-    color:#F0656F;
+    color:$primary-color;
   }
 .jedi-article-p {
     font-size: .9rem;
@@ -70,7 +70,7 @@ $avatar-size:2rem;
 }
 .jedi-article-meta{
     font-size:.8rem;
-    color:gray;
+    color:$meta-color;
 
 }
 @include media-breakpoint-down(md) {
