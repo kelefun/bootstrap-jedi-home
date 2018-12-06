@@ -1,52 +1,7 @@
-@import '../assets/scss/bootstrap.custom.scss';
-$avatar-size:1.5rem;
-$header-avatar-size:2rem;
-.iconfont{
-    color:$primary-color;
-}
-.navbar {
-    padding: 0 1rem;
-}
-.navbar-light {
-    background: $white;
-}
-
-.jedi-logo {
-    height: 4rem;
-    width: auto;
-    margin: -0.75rem .75rem;
-}
-
-.jedi-header-avatar {
-    height: $header-avatar-size;
-    width: $header-avatar-size;
-}
-
-.jedi-content-wrapper {
-    background-color: white;
-    min-height: 50rem;
-    padding: 1rem 2rem;
-}
-
-.jedi-content .carousel-inner {
-    max-height: 210px;
-}
-.jedi-content {
-    padding: 0 5rem;
-}
-.jedi-banner {
-    max-height: 210px;
-}
-
-.jedi-side {
-    // background-color: wheat;
-}
-
-.jedi-divider {
-    height: 10px;
-    border-bottom: 1px solid $primary-color;
-    margin: 2rem  0  0;
-}
+@import '../assets/scss/globle';
+// .jedi-side {
+//       background-color: wheat;
+// }
 
 .jedi-overview{
     margin-top: 1rem;
@@ -72,12 +27,4 @@ $header-avatar-size:2rem;
     font-size:.8rem;
     color:$meta-color;
 
-}
-@include media-breakpoint-down(md) {
-    .jedi-md-dispear {
-        display: none;
-    }
-    .jedi-content {
-        padding: 0;
-    }
 }

@@ -1,4 +1,4 @@
-@import '../../assets/scss/bootstrap.custom.scss';
+@import '../../assets/scss/globle';
 html,
 body {
   height: 100%;
@@ -19,6 +19,7 @@ body {
   max-width: 330px;
   padding: 15px;
   margin: auto;
+  background-color: white
 }
 .form-signin .checkbox {
   font-weight: 400;
