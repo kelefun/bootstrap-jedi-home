@@ -2,7 +2,6 @@
 // .jedi-side {
 //       background-color: wheat;
 // }
-
 .jedi-overview{
     margin-top: 1rem;
 }
@@ -19,6 +18,11 @@
     font-size:.8rem;
     color:$primary-color;
   }
+.jedi-article-h {
+    color: #000;
+    font-weight:bold;
+    // font-size:18px;
+}
 .jedi-article-p {
     font-size: .9rem;
     letter-spacing: 0;
@@ -26,5 +30,4 @@
 .jedi-article-meta{
     font-size:.8rem;
     color:$meta-color;
-
 }

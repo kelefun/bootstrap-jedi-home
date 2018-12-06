@@ -1,1 +1,33 @@
 @import '../../assets/scss/globle';
+$avatar-size:2.5rem;
+.sticky-top {
+    top: 5rem;
+}
+
+.jedi-author {
+    margin: 30px 0 40px;
+}
+
+.section-nav {
+    border-right: 1px solid rgba(0, 0, 0, 0.125);
+    ul li {
+        list-style: none;
+        list-style-type: none
+    }
+}
+
+.jedi-avatar {
+    width: $avatar-size;
+    height: $avatar-size;
+}
+
+.btn.btn-success.follow {
+    padding: 0 7px 0 5px;
+    font-size: 12px;
+    color: white;
+}
+
+.jedi-article-meta {
+    font-size: .8rem;
+    color: $meta-color;
+}

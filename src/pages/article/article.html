@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -7,18 +8,25 @@
   <link type="text/css" href="https://at.alicdn.com/t/font_938740_joq59zqfjpi.css" rel="Stylesheet" />
   <title>Jedi_Java</title>
 </head>
+
 <body>
   ${require('html-loader!../../tpl/header/header.html')}
   <div class="jedi-content-wrapper container">
     <div class="row">
-      <div class="jedi-content col-lg-9">
-        ${require('html-loader!../../tpl/article/content.html')}
-      </div><!--jedi-content 左边内容区结束-->
-      <div class="jedi-side jedi-md-dispear col-lg-3">
-        侧边栏
+      <aside class="jedi-side jedi-md-dispear col-lg-3 ">
+          ${require('html-loader!../../tpl/article/nav.html')}
+      </aside>
+      <div class="col-lg-9">
+        <article>
+          <h2>GitHub十年，感谢有你</h2>
+          ${require('html-loader!../../tpl/article/author.html')}
+          <section data-spy="scroll" data-offset="0">
+            ${require('html-loader!../../tpl/article/content.html')}
+          </section>
+        </article>
       </div>
+      <!--jedi-content 左边内容区结束-->
     </div>
-
   </div>
 </body>
 
