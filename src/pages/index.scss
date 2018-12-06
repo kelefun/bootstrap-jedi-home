@@ -45,12 +45,12 @@ $header-avatar-size:2rem;
 .jedi-divider {
     height: 10px;
     border-bottom: 1px solid $primary-color;
-    margin: 10px 0;
+    margin: 2rem  0  0;
 }
 
-// .jedi-overview{
-//     padding:0 .3rem;
-// }
+.jedi-overview{
+    margin-top: 1rem;
+}
 .jedi-overview-avatar{
     width: $avatar-size;
     height: $avatar-size;
