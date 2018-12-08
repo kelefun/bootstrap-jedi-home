@@ -1,11 +1,9 @@
 @import '../assets/scss/globle';
-// .jedi-side {
-//       background-color: wheat;
-// }
 .jedi-overview{
     margin-top: 1rem;
 }
 .jedi-overview-avatar{
+    $avatar-size:1.5rem;
     width: $avatar-size;
     height: $avatar-size;
 }
