@@ -1,5 +1,5 @@
-//重写bootstarp 变量
-$body-bg: #f8f8f9;
+//自定义bootstarp 变量,重写样式
+$body-bg: #f8f9fa;
 $primary-color: #f0656f;
 $theme-colors: ( "primary": $primary-color, );
 $navbar-light-color: rgba(#000000, .7);
@@ -8,8 +8,14 @@ $navbar-light-active-color: $primary-color;
 $navbar-light-disabled-color: rgba($primary-color, .3);
 //自定义公共变量
 $meta-color: #a8a7a7;
+$blockquote-color: #e8e8e8;
+$parter-color: #F1E7DE;
+
 //此语句 需在最下方
 @import "bootstrap/scss/bootstrap.scss";
+.btn{
+    padding: 0.2rem 0.6rem;
+}
 .iconfont {
     color: $primary-color;
 }
@@ -39,16 +45,21 @@ $meta-color: #a8a7a7;
     height: $avatar-size;
     width: $avatar-size;
 }
-
+.jedi-article-label {
+    background:inherit;
+    border-width:1px;
+    border-style:solid;
+    border-color: $primary-color ;
+    border-radius:4px;
+    padding: .1rem .5rem;
+    font-size:.8rem;
+    color:$primary-color;
+  }
 .jedi-content-wrapper {
     background-color: white;
     min-height: 50rem;
     padding: 1rem 2rem;
 }
-
-// .jedi-content .carousel-inner {
-//     max-height: 210px;
-// }
 img {
     max-height: 210px;
 }
@@ -79,4 +90,9 @@ img {
     .jedi-md-dispear {
         display: none;
     }
+}
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 3px solid $blockquote-color;
 }

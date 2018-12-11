@@ -14,103 +14,69 @@
   ${require('html-loader!../../tpl/header/header.html')}
   <div class="jedi-content-wrapper container">
     <div class="row">
-      <aside class="jedi-md-dispear col-lg-3 ">
+      <aside class="jedi-md-dispear col-lg-3">
         ${require('html-loader!../../tpl/article/nav.html')}
       </aside>
-      <div class="col-lg-9">
+      <div class="col-lg-8">
         <article>
-          <h2>GitHub十年，感谢有你</h2>
+          <h3>GitHub十年，感谢有你</h3>
           ${require('html-loader!../../tpl/article/author.html')}
           <section data-spy="scroll" data-offset="0">
             ${require('html-loader!../../tpl/article/content.html')}
           </section>
         </article>
-        <div class="jedi-article-lable p-3">
-          文章标签
+        <div class="">
+          <p class=""><span>若有收获，就传递原力吧</span></p>
+          <div><svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-ziya"></use>
+            </svg></div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <a href="/u/a4736ef8bd1d">
-              <img class="jedi-avatar rounded" src="../../assets/media/avatar.jpg">
-              <span class="name">中二君</span>
-            </a>
-            <button type="button" class="btn btn-success follow"><span>关注</span></button>
-          </div>
-        </div>
-        <div class="jedi-textarea-wrapper">
-          <div class="jedi-textarea flex-grow-0" placeholder="写下你的评论" contenteditable="true"></div>
-          <div>
-            <div><svg class="Zi Zi--Emotion" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.523 13.5h8.954c-.228 2.47-2.145 4-4.477 4-2.332 0-4.25-1.53-4.477-4zM12 21a9 9 0 1 1 0-18 9 9 0 0 1 0 18zm0-1.5a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15zm-3-8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm6 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"></path>
+        <blockquote class="article-label-wrapper">
+          <span class="jedi-article-label  px-2">Spring</span>
+        </blockquote>
+        <div class="jedi-textarea-wrapper  px-md-4">
+          <div class="jedi-textarea" placeholder="写下你的评论" contenteditable="true"></div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-ziya"></use>
               </svg></div>
-            <button>发布</button>
+            <button class="btn btn-primary">发布</button>
           </div>
         </div>
         <div class="jedi-comment p-3">
           评论区将此处的withSockJS()去除，就可以通过原生方式连接了，因为soket在浏览器不支持wobsoket请求是会自动切换为http请求轮训方式
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-xingxingyan"></use>
-          </svg>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-xiaochulei"></use>
-          </svg>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-nanguo"></use>
-          </svg>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-liulei"></use>
-          </svg>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-jingsong"></use>
-          </svg>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-hanyan"></use>
-          </svg>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-ganga"></use>
-          </svg>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-fadai"></use>
-          </svg>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-ziya"></use>
-          </svg>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-aixin"></use>
-          </svg>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-baiyan"></use>
-          </svg>
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-bizui"></use>
-          </svg>
+
           将此处的withSockJS()去除，就可以通过原生方式连接了，因为soket在浏览器不支持wobsoket请求是会自动切换为http请求轮训方式
         </div>
         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
           弹框
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                弹框
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+      <div class="jedi-md-dispear col-lg-1">
+
       </div>
     </div>
   </div>

@@ -7,22 +7,16 @@
     width: $avatar-size;
     height: $avatar-size;
 }
-.jedi-overview-label {
-    background:inherit;
-    border-width:1px;
-    border-style:solid;
-    border-color: $primary-color ;
-    border-radius:4px;
-    font-size:.8rem;
-    color:$primary-color;
-  }
+
 .jedi-article-h {
     color: #000;
-    font-weight:bold;
+    // font-weight:bold;
     // font-size:18px;
 }
 .jedi-article-p {
-    font-size: .9rem;
+    font-size: .88rem;
+    // font-size: 14px;
+    color: #585858;
     letter-spacing: 0;
 }
 .jedi-article-meta{
