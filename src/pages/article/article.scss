@@ -11,12 +11,16 @@ $avatar-size: 2.5rem;
     border-left: 2px solid $border-color;
 }
 .aside-article-nav{
-    border-right: 2px solid $border-color;
+    height: calc(100vh - 100px);    
+    // border-right: 2px solid $border-color;
+    overflow:auto; 
+
 }
 // .aside-left{
-//     background-color: $bg-color;
-//     margin-left: -2rem;
-//     margin-top: -1rem;
+//     // background-color: $bg-color;
+//     // margin-left: -2rem;
+//     // margin-top: -1rem;
+//     // overflow-y: scroll
 // }
 .aside-menu-text {
     // margin-top: 1rem;
