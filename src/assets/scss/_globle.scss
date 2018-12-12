@@ -1,17 +1,14 @@
+@import "./color";
 //自定义bootstarp 变量,重写样式
-$body-bg: #f8f9fa;
-$primary-color: #f0656f;
+$body-bg: $bg-color;
+$primary-color:$theme-color;
 $theme-colors: ( "primary": $primary-color, );
-$navbar-light-color: rgba(#000000, .7);
+$navbar-light-color:$text-color;
 $navbar-light-hover-color: $primary-color;
 $navbar-light-active-color: $primary-color;
-$navbar-light-disabled-color: rgba($primary-color, .3);
-//自定义公共变量
-$meta-color: #a8a7a7;
-$blockquote-color: #e8e8e8;
-$parter-color: #F1E7DE;
+$navbar-light-disabled-color: $meta-color;
 
-//此语句 需在最下方
+//此语句 需在自定义bootstarp最下方
 @import "bootstrap/scss/bootstrap.scss";
 .btn{
     padding: 0.2rem 0.6rem;
@@ -19,7 +16,7 @@ $parter-color: #F1E7DE;
 .iconfont {
     color: $primary-color;
 }
-.icon {
+.icon-emoji {
     width: 1.5em; height: 1.4em;
     vertical-align: -0.15em;
     fill: currentColor;
@@ -94,5 +91,5 @@ img {
 blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
-    border-left: 3px solid $blockquote-color;
+    border-left: 3px solid $border-color;
 }

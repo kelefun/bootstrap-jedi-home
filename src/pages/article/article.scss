@@ -1,23 +1,23 @@
 @import '../../assets/scss/globle';
+$avatar-size: 2.5rem;
 .jedi-author-wrapper {
     margin: 30px 0 40px;
 }
 
 .section-nav.sticky-top {
-    margin-top: 2rem;
+    margin-top: 1rem;
     top: 5rem;
-    border-right: 2px solid $blockquote-color;
+    border-right: 2px solid $border-color;
     ul li {
         list-style: none;
         list-style-type: none;
         a {
-            color: rgba(0, 0, 0, .65);
+            color: $text-color;
         }
     }
 }
 
-.jedi-avatar {
-    $avatar-size: 2.5rem;
+.jedi-article-avatar {
     width: $avatar-size;
     height: $avatar-size;
 }
@@ -25,14 +25,27 @@
 .btn.btn-success.follow {
     padding: 0 7px 0 7px;
     font-size: 12px;
-    color: white;
+    color: $white;
 }
 
 .jedi-article-meta {
     font-size: .8rem;
     color: $meta-color;
 }
-
+.icon-yuanli {
+    $size:2.5rem;
+    width: $size; height: $size;
+    // vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+.icon-comment-area {
+    $size:1.5rem;
+    width: $size; height: $size;
+    // vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
 .jedi-textarea {
     @extend .form-control;
     margin-bottom: .35rem;
@@ -49,16 +62,29 @@
 
 .jedi-textarea-wrapper {
     padding: .8rem .5rem;
-    // border: 2px solid $blockquote-color;
     border-radius: 5px;
     background-color: $parter-color
 }
+
 .article-label-wrapper {
-    padding: .25rem 1rem;
-    // border: 2px solid $blockquote-color;
-    // background-color:  $body-bg
+    padding: .25rem 0; // background-color:  $body-bg
 }
-.doc-contents .doc-article .lark-like {
-    padding: 48px 0;
-    font-size: 14px;
+
+.jedi-comment {
+    .jedi-comment-content {
+        margin-left: $avatar-size + 0.3rem;
+        margin-top: .5rem;
+        font-size: .88rem;
+    }
+    .jedi-comment-author {
+        font-size: .88rem;
+        a {
+            color: $black;
+        }
+    }
+    .jedi-comment-avatar {
+        $avatar-size: 2.3rem;
+        width: $avatar-size;
+        height: $avatar-size;
+    }
 }

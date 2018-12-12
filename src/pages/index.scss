@@ -9,15 +9,14 @@
 }
 
 .jedi-article-h {
-    color: #000;
+    color: $black;
     // font-weight:bold;
     // font-size:18px;
 }
 .jedi-article-p {
     font-size: .88rem;
     // font-size: 14px;
-    color: #585858;
-    letter-spacing: 0;
+    // color: $text-color;
 }
 .jedi-article-meta{
     font-size:.8rem;
