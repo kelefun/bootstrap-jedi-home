@@ -4,15 +4,33 @@ $avatar-size: 2.5rem;
     margin: 30px 0 40px;
 }
 
-.section-nav.sticky-top {
-    margin-top: 1rem;
+.sticky-top {
     top: 5rem;
+}
+.aside-article-dir{
+    border-left: 2px solid $border-color;
+}
+.aside-article-nav{
     border-right: 2px solid $border-color;
-    ul li {
-        list-style: none;
-        list-style-type: none;
-        a {
-            color: $text-color;
+}
+// .aside-left{
+//     background-color: $bg-color;
+//     margin-left: -2rem;
+//     margin-top: -1rem;
+// }
+.aside-menu-text {
+    // margin-top: 1rem;
+    ul {
+        padding-inline-start: 10px;
+
+        li {
+            list-style: none;
+            list-style-type: none;
+            padding-inline-start: 4px;
+            a {
+                font-size: .8rem;
+                color: $text-color;
+            }
         }
     }
 }
@@ -32,20 +50,23 @@ $avatar-size: 2.5rem;
     font-size: .8rem;
     color: $meta-color;
 }
+
 .icon-yuanli {
-    $size:2.5rem;
-    width: $size; height: $size;
-    // vertical-align: -0.15em;
+    $size: 2.5rem;
+    width: $size;
+    height: $size; // vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
- }
+}
+
 .icon-comment-area {
-    $size:1.5rem;
-    width: $size; height: $size;
-    // vertical-align: -0.15em;
+    $size: 1.5rem;
+    width: $size;
+    height: $size; // vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
- }
+}
+
 .jedi-textarea {
     @extend .form-control;
     margin-bottom: .35rem;
