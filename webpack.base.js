@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const entries = {};
 const jsFiles = glob.sync(path.resolve(__dirname, 'src') + '/pages/**/*.js');
 jsFiles.forEach(entry => {
-  console.log("遍历entry=" + entry)
+  // console.log("遍历entry=" + entry)
   var end = entry.lastIndexOf(".");
   let start = entry.lastIndexOf("/");
   if (start < 0) { start = entry.lastIndexOf("\\") }
@@ -23,7 +23,7 @@ const htmls = htmlFiles.map(html => {
     minify: false,
     template: html,
     filename:name,
-    chunks: [chunkName,'commons'],
+    chunks: [chunkName,'commons','mockdata'],
     loader: 'html-loader',
     favicon: '../favicon.ico'
   })
@@ -53,7 +53,15 @@ module.exports = {
       // url-loader(for images)
       { test: /\.(jpg|png|gif|svg)$/, use: [{ loader: 'url-loader', options: { limit: 5120, name: '[name].[ext]', outputPath: './assets/media/' } }] },
       // file-loader(for fonts)
-      { test: /\.(woff|woff2|eot|ttf|otf)$/, use: ['file-loader'] }
+      { test: /\.(woff|woff2|eot|ttf|otf)$/, use: ['file-loader'] },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
+      }
     ]
   },
   plugins: [
