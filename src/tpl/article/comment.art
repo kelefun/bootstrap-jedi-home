@@ -15,9 +15,10 @@
             </div>
         </div>
         <div class="flex-shrink-0">
-           <span> <svg class="icon-comment-area" aria-hidden="true">
+           <svg class="icon-comment-action" aria-hidden="true">
                 <use xlink:href="#icon-dianzan"></use>
-              </svg></span>
+           </svg>
+           <span class="jedi-agree-num">{{$value.agreeNum}}</span>
         </div>
     </div>
     <div id="jedi-comment-content"class="jedi-comment-content">

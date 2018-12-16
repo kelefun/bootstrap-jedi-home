@@ -63,8 +63,8 @@ $avatar-size: 2.5rem;
     overflow: hidden;
 }
 
-.icon-comment-area {
-    $size: 1.5rem;
+.icon-comment-action {
+    $size: 1.2rem;
     width: $size;
     height: $size; // vertical-align: -0.15em;
     fill: currentColor;
@@ -104,12 +104,16 @@ $avatar-size: 2.5rem;
     .jedi-comment-author {
         font-size: .88rem;
         a {
-            color: $black;
+            color: $meta-color;
         }
     }
     .jedi-comment-avatar {
         $avatar-size: 2.3rem;
         width: $avatar-size;
         height: $avatar-size;
+    }
+    .jedi-agree-num{
+        color: $theme-color;
+        font-size: .88rem
     }
 }
