@@ -18,12 +18,12 @@ const htmls = htmlFiles.map(html => {
   let start = html.lastIndexOf("/");
   var end = html.lastIndexOf(".");
   let name = html.substring(start + 1);
-  let chunkName = html.substring(start + 1,end);
+  let chunkName = html.substring(start + 1, end);
   return new HtmlWebpackPlugin({
     minify: false,
     template: html,
-    filename:name,
-    chunks: [chunkName,'commons','mockdata'],
+    filename: name,
+    chunks: [chunkName, 'commons', 'mockdata'],
     loader: 'html-loader',
     favicon: '../favicon.ico'
   })
@@ -61,6 +61,13 @@ module.exports = {
           'postcss-loader',
           'sass-loader',
         ],
+      }, {
+        test: /\.art$/,
+        loader: "art-template-loader",
+        options: {
+          // art-template options (if necessary)
+          // @see https://github.com/aui/art-template
+        }
       }
     ]
   },

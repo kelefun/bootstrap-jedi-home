@@ -1,4 +1,5 @@
-<div class="jedi-comment">
+{{each d}}
+    <div class="jedi-comment">
     <div class="d-flex align-items-center">
         <div class="pr-2">
             <a href="/u/a4736ef8bd1d">
@@ -20,7 +21,8 @@
         </div>
     </div>
     <div id="jedi-comment-content"class="jedi-comment-content">
-        评论区将此处的去除，就可以通过原生方式连接了{{value}}
+     {{$value.content}}
     </div>
     <hr>
 </div>
+{{/each}}
