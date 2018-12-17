@@ -1,44 +1,25 @@
 const path = require('path');
 const merge = require('webpack-merge');
+const baseConfig = require('./webpack.base');
+const devConfig = require('./webpack.dev');
+const prodConfig = require('./webpack.prod');
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const config = require('./webpack.base');
 
 module.exports = (env, argv) => {
   // console.log('env=' + env + ',argv=' + JSON.stringify(argv));
   let result;
-  if (argv.mode === 'development') {//merge 开发环境独有配置
-    result = merge(config, {
-      devtool: 'inline-source-map',
-      devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        open: false,
-        host: '0.0.0.0', // 0.0.0.0 localhost
-        port: 8088,
-      }
-    });
-  } else {//merge 生产环境独有配置
-    result = merge(config, {
-      optimization: {
-        splitChunks: {
-          cacheGroups: {
-            commons: {
-              name: "commons",
-              chunks: "initial",
-              minChunks: 2
-            }
-          }
-        }
-      }
-    });
+  if (argv.mode === 'development') {
+    result = merge(baseConfig, devConfig);//merge 开发环境
+  } else {
+    result = merge(baseConfig, prodConfig);//merge 生产环境
   }
-  //merge 公共配置,但vlaue稍有区别
-  let mock = argv.mock;
-  if(mock){//是否加载mock数据
-    // const mockjsFiles = glob.sync(path.resolve(__dirname, 'src') + 'mock/total.mock.js');
-    let mockdatajs=path.resolve(__dirname, 'src') + '/mock/total.mock.js';
-    result.entry["mockdata"]=mockdatajs;
+  //merge 公共配置
+  if (argv.mock) {//是否加载mock数据
+    let mockdatajs = path.resolve(__dirname, 'src') + '/mock/total.mock.js';
+    result.entry["mockdata"] = mockdatajs;
     // console.log("####打印="+JSON.stringify(result.entry))
   }
+  console.log("####打印=" + argv.scope);
   // console.log(result);
   return result;
 }; 
