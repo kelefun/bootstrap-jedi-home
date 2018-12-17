@@ -3,35 +3,40 @@ const glob = require('glob');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const entries = {};
-const jsFiles = glob.sync(path.resolve(__dirname, 'src') + '/pages/**/*.js');
-jsFiles.forEach(entry => {
-  // console.log("遍历entry=" + entry)
-  var end = entry.lastIndexOf(".");
-  let start = entry.lastIndexOf("/");
-  if (start < 0) { start = entry.lastIndexOf("\\") }
-  let name = entry.substring(start + 1, end);
-  entries[name] = entry;
-});
-const htmlFiles = glob.sync(path.resolve(__dirname, 'src') + '/pages/**/*.html');
-const htmls = htmlFiles.map(html => {
-  let start = html.lastIndexOf("/");
-  var end = html.lastIndexOf(".");
-  let name = html.substring(start + 1);
-  let chunkName = html.substring(start + 1, end);
-  return new HtmlWebpackPlugin({
-    minify: false,
-    template: html,
-    filename: name,
-    chunks: [chunkName, 'commons', 'mockdata'],
-    loader: 'html-loader',
-    favicon: '../favicon.ico'
-  })
-});
-module.exports = {
+
+const getEntries = (scope) => {
+  let entries = {};
+  let jsFiles = glob.sync(path.resolve(__dirname, 'src') + '/pages/**/' + scope+'.js');
+  jsFiles.forEach(entry => {
+    var end = entry.lastIndexOf(".");
+    let start = entry.lastIndexOf("/");
+    if (start < 0) { start = entry.lastIndexOf("\\") }
+    let name = entry.substring(start + 1, end);
+    entries[name] = entry;
+  });
+  return entries;
+}
+const getHtmls = (scope) => {
+  let htmlFiles = glob.sync(path.resolve(__dirname, 'src') + '/pages/**/' + scope+'.html');
+  return htmlFiles.map(html => {
+    let start = html.lastIndexOf("/");
+    var end = html.lastIndexOf(".");
+    let name = html.substring(start + 1);
+    let chunkName = html.substring(start + 1, end);
+    return new HtmlWebpackPlugin({
+      minify: false,
+      template: html,
+      filename: name,
+      chunks: [chunkName, 'commons', 'mockdata'],
+      loader: 'html-loader',
+      favicon: '../favicon.ico'
+    })
+  });
+}
+
+let result = {
   // absolute path for project root
   context: path.resolve(__dirname, 'src'),
-  entry: entries,
   output: {
     // absolute path declaration
     path: path.resolve(__dirname, 'dist'),
@@ -79,5 +84,16 @@ module.exports = {
       filename: "./assets/css/[name].[hash].css",
       chunkFilename: "./assets/css/[id].[hash].css"
     }),
-  ].concat(htmls),
+  ],
 };
+
+module.exports = (argv) => {
+  let scope = argv.scope;
+  if (scope === undefined) {
+    scope = '*'
+  }
+ result['entry']=getEntries(scope);
+ result['plugins']=result['plugins'].concat(getHtmls(scope));
+//  console.log("返回结果="+JSON.stringify(result));
+ return result;
+}

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode development --mock",
     "build:prod": "webpack --mode production -p",
-    "dev": "webpack-dev-server --mode development --mock --scope * --progress"
+    "dev": "webpack-dev-server --mode development --mock --progress  --scope *"
   },
   "keywords": [],
   "author": "liukaiyang",

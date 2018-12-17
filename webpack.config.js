@@ -1,13 +1,14 @@
 const path = require('path');
 const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base');
+const baseConfigFunc = require('./webpack.base');
 const devConfig = require('./webpack.dev');
 const prodConfig = require('./webpack.prod');
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env, argv) => {
   // console.log('env=' + env + ',argv=' + JSON.stringify(argv));
-  let result;
+  
+  let result,baseConfig=baseConfigFunc(argv);
   if (argv.mode === 'development') {
     result = merge(baseConfig, devConfig);//merge 开发环境
   } else {
