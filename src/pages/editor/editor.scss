@@ -1,0 +1,28 @@
+@import '../../assets/scss/globle';
+.jedi-textarea-toolbar {
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    .iconfont {
+        font-size: 20px;
+        color: $meta-color;
+    }
+}
+
+.sticky-top {
+    top: 5rem;
+}
+
+.jedi-textarea-input {
+    -webkit-user-modify: read-write-plaintext-only;
+    min-height: 80vh;
+    padding-top: 1rem; // border: 1px solid #ccc;
+    &:empty::after {
+        color: $meta-color;
+        font-size: .8rem;
+        content: attr(placeholder);
+    }
+    &:focus {
+        content: none;
+        outline-color: white;
+    }
+}

@@ -7,27 +7,39 @@ $navbar-light-color:$text-color;
 $navbar-light-hover-color: $primary-color;
 $navbar-light-active-color: $primary-color;
 $navbar-light-disabled-color: $meta-color;
-
+.tooltip-inner {
+    color: #000!important;
+    background-color:rgb(196, 196, 196)!important;
+}
+.arrow{
+   opacity:.2 ;
+ }
 //此语句 需在自定义bootstarp最下方
 @import "bootstrap/scss/bootstrap.scss";
-.btn{
+.btn {
     padding: 0.2rem 0.6rem;
 }
+
 .iconfont {
     color: $primary-color;
 }
+
 .icon-emoji {
-    width: 1.5em; height: 1.4em;
+    width: 1.5em;
+    height: 1.4em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
- }
+}
+
 .navbar {
     padding: 0 1rem;
 }
-.navbar-toggler:focus{
+
+.navbar-toggler:focus {
     outline: $primary-color auto 5px;
 }
+
 .navbar-light {
     background: $white;
 }
@@ -37,26 +49,30 @@ $navbar-light-disabled-color: $meta-color;
     width: auto;
     margin: -0.75rem .75rem;
 }
+
 .jedi-header-avatar {
-    $avatar-size:2rem;
+    $avatar-size: 2rem;
     height: $avatar-size;
     width: $avatar-size;
 }
+
 .jedi-article-label {
-    background:inherit;
-    border-width:1px;
-    border-style:solid;
-    border-color: $primary-color ;
-    border-radius:4px;
+    background: inherit;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $primary-color;
+    border-radius: 4px;
     padding: 0 .5rem;
-    font-size:.8rem;
-    color:$primary-color;
-  }
+    font-size: .8rem;
+    color: $primary-color;
+}
+
 .jedi-content-wrapper {
     background-color: white;
-    min-height: 50rem;
+    min-height: 90vh;
     padding: 1rem 2rem;
 }
+
 img {
     max-height: 210px;
 }
@@ -71,25 +87,28 @@ img {
     height: auto;
     min-height: 1rem;
     padding: 0.25rem 0.75rem;
-    &:focus{
+    &:focus {
         box-shadow: 0 0 0 0.1rem rgba($primary-color, 0.45);
-
     }
-    &::-webkit-input-placeholder { 
-        color:    $meta-color;
+    &::-webkit-input-placeholder {
+        color: $meta-color;
         font-size: .8rem
     }
 }
-.modal{
-    top:150px;
+
+.modal {
+    top: 150px;
 }
+
 @include media-breakpoint-down(md) {
     .jedi-md-dispear {
         display: none;
     }
 }
+
 blockquote {
     padding: 10px 20px;
     margin: 0 0 20px;
     border-left: 3px solid $border-color;
 }
+
