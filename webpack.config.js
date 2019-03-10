@@ -20,7 +20,6 @@ module.exports = (env, argv) => {
     result.entry["mockdata"] = mockdatajs;
     // console.log("####打印="+JSON.stringify(result.entry))
   }
-  console.log("####打印=" + argv.scope);
   // console.log(result);
   return result;
 }; 
