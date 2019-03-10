@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 
 <head>
   <meta charset="UTF-8">
@@ -19,13 +19,21 @@
         <div class="jedi-textarea-wrapper">
           <div class="jedi-textarea-toolbar sticky-top">
             <span class="dropdown">
-              <i class="iconfont icon-title" id="icon-title" data-toggle="dropdown" data-placement="top"></i>
+              <i class="iconfont icon-title" id="icon-title" data-toggle="dropdown"></i>
               <div class="dropdown-menu" aria-labelledby="icon-title">
-                  <a class="dropdown-item" href="#">正文</a>
+                  <a class="dropdown-item active" data-v="p">正文</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#"><h1>H1</h1></a>
+                  <a class="dropdown-item" href="#" data-v="H6"><h6>H6</h6></a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#"><h2>H2</h2></a>
+                  <a class="dropdown-item" href="#" data-v="H5"><h5>H5</h5></a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-v="H4"><h4>H4</h4></a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-v="H3"><h3>H3</h3></a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-v="H2"><h2>H2</h2></a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#" data-v="H1"><h1>H1</h1></a>
               </div>
             </span>
             <i class="iconfont icon-bold" data-toggle="tooltip" data-placement="top" title="粗体"></i>
@@ -51,7 +59,7 @@
             <i class="iconfont icon-save" data-toggle="tooltip" data-placement="top" title="保存"></i>
           </div>
           <div class="jedi-textarea">
-            <div class="jedi-textarea-input" placeholder="写点啥吧..." contenteditable="true"></div>
+            <div class="jedi-textarea-input" placeholder="写点啥吧..." contenteditable="true" spellcheck="false">是谁带来远古的呼唤</div>
           </div>
         </div>
       </div>

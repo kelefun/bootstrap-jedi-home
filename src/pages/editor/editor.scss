@@ -1,5 +1,11 @@
 @import '../../assets/scss/globle';
 .jedi-textarea-toolbar {
+    //此特性必需,为了点击工具栏时,编辑区域焦点不消失
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     background-color: white;
     border-bottom: 1px solid #ccc;
     .iconfont {
@@ -14,9 +20,20 @@
         font-weight: bold;
         color: $theme-color;
     }
-    .dropdown-menu{
+    .dropdown-menu {
         min-width: auto;
-        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
             margin-bottom: 0;
             font-weight: 500;
             line-height: 1;
@@ -32,7 +49,8 @@
 }
 
 .jedi-textarea-input {
-    -webkit-user-modify: read-write-plaintext-only;
+    //read-write-plaintext-only特性会使document.execCommand失效
+    // -webkit-user-modify: read-write-plaintext-only;
     min-height: 80vh;
     padding-top: 1rem; // border: 1px solid #ccc;
     &:empty::after {
